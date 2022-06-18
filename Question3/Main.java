@@ -15,8 +15,11 @@ public class Main {
 	ls.add(new Student(13,"Aati",430));
 	ls.add(new Student(10,"Brijesh",410));
 	
-//	List<Employee> emp=ls.stream().map(s-> ).collect(Collectors.toList());
+	List<Employee> emp=ls.stream().map(s->{return new Employee(s.getRoll(),s.getName(),s.getMarks()*1000);}).collect(Collectors.toList());
 
+	for(Employee emp1: emp) {
+		System.out.println(emp1);
+	}
 	}
 
 }
